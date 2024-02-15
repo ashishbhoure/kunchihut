@@ -1,21 +1,32 @@
 import "./App.css";
 import Footer from "./components/footer";
-import Header from "./components/header";
 import Contact from "./pages/contact";
 import Project from "./pages/project";
 import "./index.css";
+import NavBar from "./components/NavBar";
+import Home from "./pages/home";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <div>
-        <h1 className="text-orange-600  underline"> hello </h1>
-        <Header />
-        <Footer />
-        <Contact />
-        <Project />
-      </div>
-    </>
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+    </Router>
+    // <>
+    //   <div>
+    //     <Home />
+    //     <NavBar />
+    //     <Footer />
+    //     <Contact />
+    //     <Project />
+    //   </div>
+    // </>
   );
 }
 
