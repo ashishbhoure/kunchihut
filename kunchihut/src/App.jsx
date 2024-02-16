@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <Routes>
+      <Routes >
         <Route path="/" element={<Home />} />
         <Route path="/project" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
