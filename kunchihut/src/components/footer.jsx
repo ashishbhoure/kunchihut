@@ -19,7 +19,7 @@ function Footer() {
                 className="h-8 me-3"
                 alt="FlowBite Logo"
               />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              <span className="text-black self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 KUNCHI HUT
               </span>
             </Link>

@@ -14,7 +14,7 @@ function NavBar() {
             className="h-8"
             alt="Flowbite Logo"
           />
-          <span className="self-center text-2xl sm:text-xl max-sm:text-xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="text-black self-center text-2xl sm:text-xl max-sm:text-xl font-semibold whitespace-nowrap dark:text-white">
             KUNCHI HUT
           </span>
         </Link>
