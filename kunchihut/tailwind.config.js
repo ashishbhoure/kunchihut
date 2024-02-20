@@ -19,4 +19,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
     "node_modules/flowbite-react/lib/esm/**/*.js",
   ],
+
+  theme: {
+    extend: {
+      animation: {
+        wiggle: "wiggle 1s ease-in-out infinite",
+      },
+    },
+  },
 };

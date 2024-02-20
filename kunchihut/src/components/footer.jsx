@@ -9,7 +9,7 @@ function Footer() {
     });
   };
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className="bg-gray-900">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -19,17 +19,17 @@ function Footer() {
                 className="h-8 me-3"
                 alt="FlowBite Logo"
               />
-              <span className="text-black self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                KUNCHI HUT
+              <span className="text-white self-center text-2xl font-semibold whitespace-nowrap">
+                MAHIMA SINGH
               </span>
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-5 sm:gap-6 sm:grid-cols-2">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-blue-300 uppercase ">
                 Resources
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-white hover:text-blue-300 font-medium">
                 <li className="mb-4">
                   <Link
                     to="project"
@@ -51,12 +51,15 @@ function Footer() {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-blue-300 uppercase">
                 Follow us
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-white hover:text-blue-300 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <Link to="#" className="hover:underline ">
+                  <Link
+                    to="https://www.instagram.com/kunchi_hut/"
+                    className="hover:underline "
+                  >
                     Instagram
                   </Link>
                 </li>
@@ -69,18 +72,18 @@ function Footer() {
             </div>
           </div>
         </div>
-        <hr className="my-6 border-gray-500 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <hr className="my-6 border-gray-500 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between ">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="text-sm text-white sm:text-center ">
             © 2024{" "}
-            <Link to="/" className="hover:underline">
+            <Link to="/" className="hover:underline hover:text-blue-300">
               Kunchi Hut
             </Link>
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 max-sm:justify-center sm:mt-0">
             <Link
-              to="#"
+              to="https://www.instagram.com/kunchi_hut/"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <img
