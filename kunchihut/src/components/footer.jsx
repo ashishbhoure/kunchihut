@@ -76,7 +76,11 @@ function Footer() {
         <div className="sm:flex sm:items-center sm:justify-between ">
           <span className="text-sm text-white sm:text-center ">
             © 2024{" "}
-            <Link to="/" className="hover:underline hover:text-blue-300">
+            <Link
+              to="/"
+              onClick={scrollToTop}
+              className="hover:underline hover:text-blue-300"
+            >
               Kunchi Hut
             </Link>
             . All Rights Reserved.

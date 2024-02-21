@@ -1,6 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Contact() {
+const Contact = () => {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(form);
+
+    // emailjs
+    //   .send(
+    //     import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+    //     import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+    //     {
+    //       from_name: form.name,
+    //       to_name: "Ashish",
+    //       from_email: form.email,
+    //       to_email: "ashishbhoure@gmail.com",
+    //       message: form.message,
+    //     },
+    //     import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+    //   )
+    //   .then(() => {
+    //     setIsLoading(false);
+    //     showAlert({
+    //       show: true,
+    //       text: "Message sent successfully!",
+    //       type: "success",
+    //     });
+    //     setTimeout(() => {
+    //       hideAlert();
+    //       setCurrentAnimation("idle");
+    //       setForm({ name: "", email: "", message: "" });
+    //     }, [3000]);
+    //   })
+    //   .catch((error) => {
+    //     setIsLoading(false);
+    //     setCurrentAnimation("idle");
+    //     console.log("====================================");
+    //     console.log(error);
+    //     console.log("====================================");
+    //     showAlert({
+    //       show: true,
+    //       text: `I didn't resive your message`,
+    //       type: "danger",
+    //     });
+    //   });
+  };
+
   return (
     <section className="p-10 xl:px-36 max-sm:p-5 ">
       <div className="heading ">
@@ -15,7 +66,7 @@ function Contact() {
         </p>
       </div>
       <div className="form mt-10 p-5 rounded-md bg-slate-200">
-        <form className="w-full mx-auto">
+        <form className="w-full mx-auto" onSubmit={handleSubmit}>
           <div className="flex flex-wrap gap-10  max-sm:gap-5 justify-between ">
             <div className="mb-5 w-[45%]">
               <label
@@ -26,10 +77,12 @@ function Contact() {
               </label>
               <input
                 type="name"
+                name="name"
                 id="name"
                 placeholder="john jeck"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 required
+                onChange={handleChange}
               />
             </div>
             <div className="mb-5 w-[45%]">
@@ -41,10 +94,12 @@ function Contact() {
               </label>
               <input
                 type="email"
+                name="email"
                 id="email"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="name@email.com"
                 required
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -58,8 +113,10 @@ function Contact() {
             <textarea
               id="message"
               rows="4"
+              name="message"
               class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Leave a message..."
+              onChange={handleChange}
             ></textarea>
           </div>
 
@@ -73,6 +130,6 @@ function Contact() {
       </div>
     </section>
   );
-}
+};
 
 export default Contact;
