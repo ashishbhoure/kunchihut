@@ -6,12 +6,13 @@ import "./index.css";
 import NavBar from "./components/NavBar";
 import Home from "./pages/home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
 
 function App() {
   return (
     <Router>
       <NavBar />
-      <Routes >
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
