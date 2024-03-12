@@ -14,6 +14,7 @@ import {
   img11,
 } from "../assets/Images";
 import ScrollAnimation from "../components/ScrollAnimation";
+import { Helmet } from "react-helmet";
 
 function Project() {
   const image = [
@@ -31,6 +32,10 @@ function Project() {
   ];
   return (
     <section className="p-10 xl:px-36 max-sm:p-5 ">
+      <Helmet>
+        <title>PROJECT - Mahima Singh</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
       <ScrollAnimation>
         <div className="heading ">
           <h1 className="text-blue-700 text-center font-bold text-2xl py-5">

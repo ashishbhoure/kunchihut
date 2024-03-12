@@ -3,10 +3,16 @@ import React from "react";
 import Slider from "../components/Slider";
 import { profile } from "../assets/Images";
 import ScrollAnimation from "../components/ScrollAnimation";
+import { Helmet } from "react-helmet";
 
 function Home() {
   return (
     <section className="xl:mx-32 p-5  max-sm:mx-0 ">
+      <Helmet>
+        <title>HOME - Mahima Singh</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
+
       <ScrollAnimation>
         <div className="flex flex-row max-sm:flex-col gap-5 justify-center py-12 max-sm:py-2 ">
           <div className="w-full ">

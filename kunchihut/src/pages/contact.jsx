@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ScrollAnimation from "../components/ScrollAnimation";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -55,6 +56,10 @@ const Contact = () => {
 
   return (
     <section className="p-10 xl:px-36 max-sm:p-5 ">
+      <Helmet>
+        <title>CONTACT - Mahima Singh</title>
+        <meta name="description" content="Helmet application" />
+    </Helmet>
       <div className="heading ">
         <h1 className="text-blue-700 text-center font-bold text-2xl py-5">
           Contect to me !!
