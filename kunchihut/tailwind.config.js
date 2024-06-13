@@ -25,6 +25,9 @@ module.exports = {
       animation: {
         wiggle: "wiggle 1s ease-in-out infinite",
       },
+      boxShadow: {
+        "3d": "0 10px 20px rgba(99, 39, 1, 0.3), 0 6px 6px rgba(99, 39, 1, 0.2)",
+      },
     },
   },
 };

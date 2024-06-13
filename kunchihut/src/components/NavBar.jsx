@@ -1,64 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-gray-900 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="bg-[#755139ff] p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* <div className="flex items-center"> */}
         <Link
           to="/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
+          className="group flex items-center "
+          onClick={() => setIsOpen(false)}
         >
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
-            alt="Flowbite Logo"
+            src="/path-to-your-logo.png"
+            alt="Logo"
+            className="h-8 w-8 mr-2"
           />
-          <span className="text-white self-center text-2xl sm:text-xl max-sm:text-xl font-semibold whitespace-nowrap ">
-            MAHIMA SINGH
+          <span className="text-[#f2edd7ff] group-hover:text-black text-xl font-bold">
+            KunchiHut
           </span>
         </Link>
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
+        {/* </div> */}
+        <div className="md:hidden ">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-[#f2edd7ff] focus:outline-none"
           >
-            <path
+            <svg
+              className="w-6 h-6"
+              fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className=" bg-gray-900 font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-900 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          className={`md:flex right-2 top-2  gap-0 md:items-center ${
+            isOpen ? "absolute" : "hidden"
+          }`}
+          // onBlur={() => setIsOpen(false)}
+        >
+          <ul className="md:flex md:space-x-6">
+            <li className="mt-0 md:mt-0 p-1 px-3 bg-[#755139ff] hover:bg-[#f2edd7ff] hover:text-[#755139ff] text-[#f2edd7ff] border-solid border-2 border-[#f2edd7ff]">
               <Link
-                to="project"
-                className="block  py-2 px-3 text-white rounded hover:bg-blue-300 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0"
+                to="/project"
+                className=""
+                onClick={() => setIsOpen(!isOpen)}
+                // onBlur={() => setIsOpen(false)}
               >
                 Projects
               </Link>
             </li>
-            <li>
+            <li className="mt-0 md:mt-0 p-1 px-3 bg-[#755139ff] hover:bg-[#f2edd7ff] hover:text-[#755139ff] text-[#f2edd7ff] border-solid border-2 border-[#f2edd7ff]">
               <Link
-                to="contact"
-                className="block  py-2 px-3 text-white rounded hover:bg-blue-300 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0"
-                aria-current="page"
+                to="/contact"
+                className=""
+                onClick={() => setIsOpen(!isOpen)}
               >
-                Contact
+                Contact Me
               </Link>
             </li>
           </ul>

@@ -16,47 +16,47 @@ import {
 function Slider() {
   return (
     <div className="slider">
-      <div className="slide-track gap-4 items-center ">
+      <div className="slide-track gap-6 items-center ">
         <div className="slide">
           <img
-            className="  h-[300px] max-w-full rounded-lg"
+            className="  h-[300px] max-w-full "
             src={img1}
             alt=""
           />
         </div>
         <div className="slide">
-          <img className=" h-[300px] max-w-full rounded-lg" src={img2} alt="" />
+          <img className=" h-[300px] max-w-full " src={img2} alt="" />
         </div>
         <div className="slide">
           <img
-            className="  h-[300px] max-w-full rounded-lg"
+            className="  h-[300px] max-w-full "
             src={img3}
             alt=""
           />
         </div>
         <div className="slide">
-          <img className="h-[300px] max-w-full rounded-lg" src={img4} alt="" />
+          <img className="h-[300px] max-w-full " src={img4} alt="" />
         </div>
         <div className="slide">
-          <img className="h-[300px] max-w-full rounded-lg" src={img5} alt="" />
+          <img className="h-[300px] max-w-full " src={img5} alt="" />
         </div>
         <div className="slide">
-          <img className="h-[300px] max-w-full rounded-lg" src={img6} alt="" />
+          <img className="h-[300px] max-w-full " src={img6} alt="" />
         </div>
         <div className="slide">
-          <img className="h-[300px] max-w-full rounded-lg" src={img7} alt="" />
+          <img className="h-[300px] max-w-full " src={img7} alt="" />
         </div>
         <div className="slide">
-          <img className="h-[300px] max-w-full rounded-lg" src={img8} alt="" />
+          <img className="h-[300px] max-w-full " src={img8} alt="" />
         </div>
         <div className="slide">
-          <img className="h-[300px] max-w-full rounded-lg" src={img9} alt="" />
+          <img className="h-[300px] max-w-full " src={img9} alt="" />
         </div>
         <div className="slide">
-          <img className="h-[300px] max-w-full rounded-lg" src={img10} alt="" />
+          <img className="h-[300px] max-w-full " src={img10} alt="" />
         </div>
         <div className="slide">
-          <img className="h-[300px] max-w-full rounded-lg" src={img11} alt="" />
+          <img className="h-[300px] max-w-full " src={img11} alt="" />
         </div>
       </div>
     </div>

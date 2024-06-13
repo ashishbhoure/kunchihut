@@ -59,9 +59,9 @@ const Contact = () => {
       <Helmet>
         <title>CONTACT - Mahima Singh</title>
         <meta name="description" content="Helmet application" />
-    </Helmet>
+      </Helmet>
       <div className="heading ">
-        <h1 className="text-blue-700 text-center font-bold text-2xl py-5">
+        <h1 className="text-[#755139] text-center font-bold text-2xl py-5">
           Contect to me !!
         </h1>
         <p className=" text-justify">
@@ -71,14 +71,14 @@ const Contact = () => {
           ducimus alias ad!
         </p>
       </div>
-      <div className="form mt-10 p-5 rounded-md bg-slate-200">
+      <div className="form mt-10 p-5  bg-[#755139]">
         <ScrollAnimation>
           <form className="w-full mx-auto" onSubmit={handleSubmit}>
             <div className="flex flex-wrap gap-10  max-sm:gap-5 justify-between ">
               <div className="mb-5 w-[45%]">
                 <label
                   for="name"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2  font-bold text-[#f2edd7ff]"
                 >
                   Full Name
                 </label>
@@ -86,8 +86,8 @@ const Contact = () => {
                   type="name"
                   name="name"
                   id="name"
-                  placeholder="john jeck"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="FirstName LatsName"
+                  className="bg-[#f2edd7ff] font-bold  text-[#755139]  block w-full p-2.5 "
                   required
                   onChange={handleChange}
                 />
@@ -95,15 +95,15 @@ const Contact = () => {
               <div className="mb-5 w-[45%]">
                 <label
                   for="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2  font-bold text-[#f2edd7ff]"
                 >
                   Your email
                 </label>
                 <input
-                  type="email"
+                  type="name"
                   name="email"
                   id="email"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-[#f2edd7ff] border-none border-indigo-950 font-bold  text-[#755139]    block w-full p-2.5 "
                   placeholder="name@email.com"
                   required
                   onChange={handleChange}
@@ -113,7 +113,7 @@ const Contact = () => {
             <div className="mb-5">
               <label
                 for="message"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                class="block mb-2  font-bold text-[#f2edd7ff]"
               >
                 Your message
               </label>
@@ -121,18 +121,20 @@ const Contact = () => {
                 id="message"
                 rows="4"
                 name="message"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="block p-2.5 w-full font-bold text-[#755139] bg-[#f2edd7ff]     "
                 placeholder="Leave a message..."
                 onChange={handleChange}
               ></textarea>
             </div>
 
-            <button
-              type="submit"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Submit
-            </button>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="w-[50%] font-extrabold hover:bg-[#f2edd7ff]  hover:text-[#755139ff] text-[#f2edd7ff] border-solid border-2 border-[#f2edd7ff] p-3 mt-5"
+              >
+                Submit
+              </button>
+            </div>
           </form>
         </ScrollAnimation>
       </div>

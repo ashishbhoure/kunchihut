@@ -9,7 +9,8 @@ import img8 from "../Images/Img8.jpg";
 import img9 from "../Images/Img9.jpg";
 import img10 from "../Images/Img10.jpg";
 import img11 from "../Images/Img11.jpg";
-import profile from "../Images/profile.jpg";
+import profile from "../Images/profile.png";
+import profile_2 from "../Images/profile-2.png";
 
 export {
   img1,
@@ -24,4 +25,5 @@ export {
   img10,
   img11,
   profile,
+  profile_2,
 };
