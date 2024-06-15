@@ -7,17 +7,17 @@ import { Helmet } from "react-helmet";
 
 function Home() {
   return (
-    <section className="xl:mx-32 p-5  max-sm:mx-0 ">
+    <section className="xl:mx-32 p-5 mb-3  max-sm:mx-0 ">
       <Helmet>
         <title>HOME - Mahima Singh</title>
         <meta name="description" content="Helmet application" />
       </Helmet>
 
       {/* <ScrollAnimation> */}
-      <div className="flex flex-row max-sm:flex-col gap-5 justify-center py-12 max-sm:py-2 ">
-        <div className="w-full flex justify-center self-center">
+      <div className="flex h-[90vh] flex-row max-sm:flex-col gap-5 mb-10 justify-center max-sm:py-2 ">
+        <div className="w-full flex justify-center self-center mt-10">
           <img
-            className="h-96 w-96 drop-shadow-2xl "
+            className="h-full w-auto drop-shadow-2xl z-10 "
             src={profile}
             alt="profile image"
           />
@@ -30,7 +30,7 @@ function Home() {
             aut.
           </p>
           <div className="flex justify-center ">
-            <button className="w-full hover:bg-[#755139ff] bg-[#f2edd7ff] hover:text-[#f2edd7ff] text-[#755139ff] border-solid border-2 border-[#755139ff] p-3 mt-5">
+            <button className="w-full hover:bg-[#f2edd7ff] bg-[#755139ff] hover:text-[#755139ff] text-[#f2edd7ff] border-solid border-2 border-[#f2edd7ff] p-3 mt-5">
               Resume
             </button>
           </div>
@@ -39,7 +39,9 @@ function Home() {
 
       {/* </ScrollAnimation> */}
       {/* <ScrollAnimation> */}
-      <Slider />
+      <div className="h-[100vh]  px-2 max-sm:h-auto max-sm:p-2 max-sm:py-5 align-middle justify-center flex bg-[#f2edd7ff]">
+        <Slider />
+      </div>
       {/* </ScrollAnimation> */}
     </section>
   );
