@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  scrollbar-color: red pink;
+}
+
 #root {
   /* max-width: 1280px;
     margin: 0 auto;
@@ -11,6 +15,14 @@
   color: #f2edd7ff;
   /* background-color: black; */
   font-family: "Courier New", Courier, monospace;
+  scrollbar-width: none;
+  /* scrollbar-width: thin; */
+}
+
+.shootImg {
+  scrollbar-color: #f2edd7ff #755139ff;
+  scrollbar-width: thin !important;
+  scroll-behavior: smooth;
 }
 
 @keyframes scroll {

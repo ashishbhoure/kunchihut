@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional - smooth scrolling animation
+    });
+  };
+
   return (
     <nav className="bg-[#755139ff] p-4 h-[10vh] sticky top-0 shadow-lg z-10">
       <div className="container mx-auto flex justify-between items-center">
@@ -10,7 +18,7 @@ function NavBar() {
         <Link
           to="/"
           className="group flex items-center "
-          onClick={() => setIsOpen(false)}
+          onClick={() => `${setIsOpen(false)} ${scrollToTop()}`}
         >
           <img
             src="/path-to-your-logo.png"
@@ -54,7 +62,7 @@ function NavBar() {
               <Link
                 to="/project"
                 className=""
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => `${setIsOpen(!isOpen)} ${scrollToTop()} `}
                 // onBlur={() => setIsOpen(false)}
               >
                 Projects
@@ -64,7 +72,7 @@ function NavBar() {
               <Link
                 to="/contact"
                 className=""
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => `${setIsOpen(!isOpen)} ${scrollToTop()}`}
               >
                 Contact Me
               </Link>
