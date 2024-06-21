@@ -11,6 +11,7 @@ import img10 from "../Images/Img10.jpg";
 import img11 from "../Images/Img11.jpg";
 import profile from "../Images/profile.png";
 import profile_2 from "../Images/profile-2.png";
+import logo from "../Images/logo.png";
 
 export {
   img1,
@@ -26,4 +27,5 @@ export {
   img11,
   profile,
   profile_2,
+  logo,
 };

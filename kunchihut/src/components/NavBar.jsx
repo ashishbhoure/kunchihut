@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { logo } from "../assets/Images";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,22 +13,22 @@ function NavBar() {
   };
 
   return (
-    <nav className="bg-[#755139ff] p-4 h-[10vh] sticky top-0 shadow-lg z-10">
+    <nav className="bg-[#755139ff] p-0 h-[10vh] sticky top-0 shadow-lg z-10">
       <div className="container mx-auto flex justify-between items-center">
         {/* <div className="flex items-center"> */}
         <Link
           to="/"
-          className="group flex items-center "
+          className="group flex items-center top-3"
           onClick={() => `${setIsOpen(false)} ${scrollToTop()}`}
         >
           <img
-            src="/path-to-your-logo.png"
+            src={logo}
             // alt="Logo"
-            className="h-8 w-8 mr-2"
+            className="w-[100%] object-cover h-16"
           />
-          <span className="text-[#f2edd7ff] group-hover:text-2xl text-xl font-bold">
+          {/* <span className="text-[#f2edd7ff] group-hover:text-2xl text-xl font-bold">
             KunchiHut
-          </span>
+          </span> */}
         </Link>
         {/* </div> */}
         <div className="md:hidden ">
@@ -57,7 +58,7 @@ function NavBar() {
           }`}
           // onBlur={() => setIsOpen(false)}
         >
-          <ul className="md:flex md:space-x-6 ">
+          <ul className="md:flex md:space-x-6 fixed right-5 top-5 ">
             <li className="mt-0 md:mt-0 p-1 px-3 bg-[#755139ff] hover:bg-[#f2edd7ff] hover:text-[#755139ff] text-[#f2edd7ff] border-solid border-2 border-[#f2edd7ff]">
               <Link
                 to="/project"
